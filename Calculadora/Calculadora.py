@@ -92,6 +92,4 @@ def calcular_menu():
          os.system("clear")
          mostrarResultado(calcular(valor1,operacio,valor2),valor1,str(operacio),valor2)
 
-
-print(multi(valor1,valor2))
 calcular_menu()
