@@ -1,4 +1,4 @@
-from ncclient import manager
+'''from ncclient import manager
 import xmltodict
 import xml.dom.minidom
 
@@ -19,8 +19,7 @@ def get_info_device():
 def create_interface():
    netconf_data = """
    <config>
-      <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
-        <interface>
+        <interface xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
             <Loopback>
                 <name>7</name>
                 <description>prueba</description>
@@ -34,7 +33,6 @@ def create_interface():
                 </ip>
             </Loopback>
         </interface>
-    </native>
    </config>
    """
    netconf_reply = Conec.edit_config(target="running",config=netconf_data)
@@ -53,7 +51,7 @@ def delete_interface():
    print(xml.dom.minidom.parseString(netconf_reply.xml).toprettyxml())
 
 
-'''
+
 def get_table_routing():
    filtro = """
         <filter>
@@ -73,8 +71,8 @@ def get_table_routing():
    diccionario = xmltodict.parse(Datos.xml)
 
    for item in diccionario:
-      
-'''
+
+
 
 def menu():
    print("**********************")
@@ -99,4 +97,4 @@ def opcion(opcion):
       print("opcion no valida")
 
 if __name__ == "__main__":
-   opcion(menu())
+   opcion(menu())'''
