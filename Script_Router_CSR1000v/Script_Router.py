@@ -1,9 +1,9 @@
-'''from ncclient import manager
+from ncclient import manager
 import xmltodict
 import xml.dom.minidom
 
 Conec = manager.connect(
-   host= "192.168.56.101",
+   host= "192.164.1.58",
    port= 830,
    username = "cisco",
    password = "cisco123!",
@@ -71,7 +71,7 @@ def get_table_routing():
    diccionario = xmltodict.parse(Datos.xml)
 
    for item in diccionario:
-
+       pass
 
 
 def menu():
@@ -97,4 +97,4 @@ def opcion(opcion):
       print("opcion no valida")
 
 if __name__ == "__main__":
-   opcion(menu())'''
+   opcion(menu())
