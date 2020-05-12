@@ -19,20 +19,22 @@ def get_info_device():
 def create_interface():
    netconf_data = """
    <config>
-        <interface xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
-            <Loopback>
-                <name>7</name>
-                <description>prueba</description>
-                <ip>
-                    <address>
-                        <primary>
-                            <address>192.168.60.60</address>
-                            <mask>255.255.255.0</mask>
-                        </primary>
-                    </address>
-                </ip>
-            </Loopback>
-        </interface>
+        <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+            <interface>
+                <Loopback>
+                    <name>7</name>
+                    <description>prueba</description>
+                    <ip>
+                        <address>
+                            <primary>
+                                <address>100.100.100.100</address>
+                                <mask>255.255.255.0</mask>
+                            </primary>
+                        </address>
+                    </ip>
+                </Loopback>
+            </interface>
+        </native>
    </config>
    """
    netconf_reply = Conec.edit_config(target="running",config=netconf_data)
@@ -71,7 +73,7 @@ def get_table_routing():
    diccionario = xmltodict.parse(Datos.xml)
 
    for item in diccionario:
-       pass
+       print(item)
 
 
 def menu():
